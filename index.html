@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<!----------------------------------------------------------------->	
+	<!-- Reset CSS -->
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/reset.css" />
+
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>The Crystal Collector</title>
+	
+	<!----------------------------------------------------------------->				
+	<!-- Latest stable minified jquery release - 3.2.1 -->
+		<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+  	</script>
+	
+	<!----------------------------------------------------------------->		
+	<!-- Latest compiled and minified Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+		crossorigin="anonymous">
+		
+	<!----------------------------------------------------------------->	
+	<!-- Custom CSS Stylesheet -->
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css" />
+		
+	<!----------------------------------------------------------------->	
+	<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Codystar|Megrim|Raleway|Skranji|Yatra+One" rel="stylesheet">
+		
+	</head>
+
+	<body>
+		<container>
+			<!------------------------------------------------------------->
+			<!-- UPPER RESTART BAR -->
+			<div class=row id=bar>														<!-- Row 1 -->
+			
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+					<div class=col-sm-8>
+						<button class="btn btn-default" type="submit" id=restart onclick=restartButton()>
+							<span id=icon class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+							Restart
+						</button>
+						
+						<button class="btn btn-default" type="submit" id=game onclick="location.href='SWindex.htmL'">
+							Star Wars
+						</button>
+					</div>
+					
+				<div class=col-sm-2> </div> <!-- blank space -->
+			
+			</div>
+			<!------------------------------------------------------------->
+			<!-- HEADER -->
+			<div class=row> 																	<!-- Row 2 -->
+				
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+				<div class=col-sm-8>
+					<h1 id=brand> Crystal Collector </h1>
+				</div>
+						
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+			</div>	
+			
+			<!------------------------------------------------------------->
+			<!-- HIDE/SHOW -->
+			<div class=row> 																	<!-- Row 2 -->
+				
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+				<div class=col-sm-8>
+					<button class="btn btn-default" type="submit" id="hide" >
+					 HIDE
+					</button>
+					<button class="btn btn-default" type="submit" id="show" >
+					 SHOW
+					</button>
+				</div>
+						
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+			</div>	
+			<!------------------------------------------------------------->
+			<!-- GAME DESCRIPTION -->
+			<div class=row id=rules>  											  <!-- Row 3 -->
+				<div class=col-md-2> </div> <!-- blank space -->
+				
+				<div class="col-md-8 gameRules">
+					
+					<div class=row>
+						
+						<div class=col-sm-4> <!-- paragraph 1 -->
+							<p class=description>
+								You will be given a random number at the start of the game.
+									<br><br>
+								By clicking on a crystal below, you will add a specific amount of points to your total score.							
+							</p>
+						</div>
+						
+						<div class=col-sm-4> <!-- paragraph 2 -->
+							<p class=description>
+								WIN the game by matching your total score to the random number displayed. 
+									<br><br>
+								LOSE the game if your total score goes above the random number.
+							</p>
+						</div>
+						
+						<div class=col-sm-4> <!-- paragraph 3 -->
+							<p class=description>
+								The value of each crystal is hidden from you until you click on it.
+									<br><br>
+								Each time the game starts, the game will change the value of each crystal. 							
+							</p>
+						</div>
+						
+					</div>
+				
+				</div>	
+						
+				<div class=col-md-2> </div> <!-- blank space -->	
+									
+			</div>
+		
+			<!------------------------------------------------------------->
+			<!-- DASHBOARD -->
+			<div class=row> 									  	        		<!-- Row 4 -->
+				
+				<div class=col-md-2> </div> <!-- blank space -->
+				
+				<div class="col-md-4 dash">
+					
+					<div class="row">
+						<div class=col-sm-6>
+							<h3> Target Score : </h3> <!-- Target Score -->
+								<br>
+						</div>
+						<div class=col-sm-6>
+							<p id=target> </p>
+						</div>	
+					</div>
+					
+					<div class="row">
+						<div class=col-sm-6>
+							<h3> Current Score : </h3> <!-- Current Score -->
+						</div>
+						<div class=col-sm-6>
+							<p id=current> </p>
+						</div>	
+					</div>
+				
+				</div>
+				
+				<div class="col-md-4 dash">
+					
+					<div class="row">
+						<div class=col-sm-6>
+							<h3> Wins : </h3> <!-- Wins -->
+								<br>
+						</div>
+						<div class=col-sm-6>
+							<p id=wins> </p>
+						</div>	
+					</div>
+					
+					<div class="row">
+						<div class=col-sm-6>
+							<h3> Losses : </h3> <!-- Losses -->
+						</div>
+						<div class=col-sm-6>
+							<p id=losses> </p>
+						</div>	
+					</div>
+				
+				</div>
+				
+				<div class=col-md-2> </div> <!-- blank space -->
+				
+			</div>
+			
+			<!------------------------------------------------------------->
+			<!-- CRYSTALS -->
+			<div class=row id=footer> 												<!-- Row 5 -->
+				
+				<div class=col-sm-2> </div> <!-- blank space -->
+				
+				<div class=col-sm-8>
+					<div class=row>
+						<div class=col-xs-3> <!-- Green Crystal -->
+							<img src="assets/images/green.png" class="img-responsive crystal" alt="Green Crystal" id=crystal1>
+						</div>
+						<div class=col-xs-3> <!-- Purple Crystal -->
+							<img src="assets/images/purple.png" class="img-responsive crystal" alt="Purple Crystal" id=crystal2>
+						</div>
+						<div class=col-xs-3> <!-- Yellow Crystal -->
+							<img src="assets/images/yellow.png" class="img-responsive crystal" alt="Yellow Crystal" id=crystal3>
+						</div>
+						<div class=col-xs-3> <!-- Black Crystal -->
+							<img src="assets/images/black.png" class="img-responsive crystal" alt="Black Crystal" id=crystal4>
+						</div>
+					
+				</div>
+				
+				<div class=col-sm-2> </div> <!-- blank space -->
+			</div>	
+			
+			<!------------------------------------------------------------->
+			<!-- FOOTER -->
+			<div class=row id=footer> 												<!-- Row 6 -->
+				
+				<div class=col-xs-2> </div> <!-- blank space -->
+				
+				<div class=col-xs-8>
+					<footer> Copyright 2017 Misael Rivera </footer>
+				</div>
+				
+				<div class=col-xs-2> </div> <!-- blank space -->
+			
+			</div>	
+			
+			<!------------------------------------------------------------->
+			
+		</container>
+		<script type="text/javascript" src="assets/javascript/game.js">
+		</script>
+	</body>
+</html>

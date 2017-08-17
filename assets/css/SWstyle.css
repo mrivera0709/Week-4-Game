@@ -1,0 +1,215 @@
+/* 	font-family: 'Exo', sans-serif;
+		font-family: 'Fjalla One', sans-serif;
+		font-family: 'Montserrat', sans-serif;
+		font-family: 'Raleway', sans-serif;
+		font-family: 'Roboto', sans-serif;
+		font-family: 'Saira Extra Condensed', sans-serif;
+		font-family: 'Teko', sans-serif; /*
+
+
+/* ---- GLOBAL CSS ------------------ */
+body 
+	{
+  background: linear-gradient(to bottom right, #292929, #08080F ); /* Standard syntax (must be last) */
+	background-attachment: fixed;
+	color:#eee;
+	font-family: 'Raleway', sans-serif;
+	min-width=400px;
+	}
+
+/* ---- UPPER CONTACT BAR------------ */	
+#bar
+	{
+	padding:10px 0;
+	box-shadow: 0px 5px 20px black;
+	}
+	
+#bar:hover
+	{
+	/* background: linear-gradient(to right, #8F250D, #FF1900); */
+	background: linear-gradient(to top, #292929, #FF0011, #fff, #fff, #fff, #FF0011, #292929 );
+	padding:10px 0;
+	box-shadow: 0px 5px 20px #292929;
+	}
+
+#logo
+	{
+	margin-top:25px
+	}
+
+/* ---- RESTART BUTTON---------------- */	
+#restart, #game
+	{
+	padding:5px 30px;
+	color:white;
+	border: 1px solid white;
+	background-color:#292929;
+	float:right;
+	border-radius:150px;
+	font-family: 'Teko', sans-serif;
+	font-size:1.5em;
+	}
+	
+#restart:hover, #game:hover
+	{
+	padding:5px 30px;
+	color:#FF0011;
+	border: 1px solid white;
+	background-color:white;
+	float:right;
+	border-radius:150px;
+	font-family: 'Teko', sans-serif;
+	font-size:1.5em;
+	}
+	
+#game, #game:hover
+	{
+	float:left;
+	}
+
+/* -- RESET FOR MARGIN AND PADDING--- */
+/* -- FOR LARGER COLUMNS ------------ */		
+.col-sm-7, .col-sm-8, .col-sm-2, .col-xs-6
+	{
+	margin:0;
+	padding:0;
+	}
+
+.col-xs-6
+	{
+	max-height:70px;
+	}
+	
+/* ---- HEADINGS--------------------- */
+h1 
+	{
+	padding:20px 0 30px 0;
+	font-weight:lighter !important;
+	font-size: 5em;
+	margin:0;
+	font-family: 'Teko', sans-serif;
+	text-align:center;
+	}
+	
+h3
+	{
+	padding-top:30px ;
+	text-align:left;
+	margin:0;
+	font-family: 'Teko', sans-serif;
+	font-weight:lighter !important;
+	font-size: 2em;
+	}
+	
+h4
+	{
+	font-weight:bold;
+	font-size:1.5em;
+	padding-bottom:20px;
+	min-width:400px;
+	}
+
+/* ---- CHARACTERS------------------- */
+
+.name
+	{
+	padding:10px 0;
+	text-align:center;
+	margin:0;
+	font-size:2em;
+	font-family: 'Teko', sans-serif;
+	}
+	
+.specs
+	{
+	padding:10px 0;
+	text-align:center;
+	margin:0;
+	font-size:1.25em;
+	font-family: 'Teko', sans-serif;
+	vertical-align:middle;
+	margin:5px 0;
+	}
+
+.charImg	
+	{
+	height:300px;
+	margin:0 auto
+	}
+
+#sidious, #vader, #yoda, #luke
+	{
+	background-color:#0F0F0F;
+	border:1px solid white;
+	color:white;
+	text-align:center;
+	margin:2px;
+	min-height:350px;
+	width:223px;
+	}
+	
+#sidious:hover, #vader:hover
+	{
+	background-color:#0F0F0F;
+	box-shadow: 10px 0 75px #9E0000;
+	
+	}
+	
+#yoda:hover, #luke:hover
+	{
+	background-color:#0F0F0F;
+	box-shadow: 10px 0px 75px  #2881FF; 5px 5px 20px white;
+	
+	}
+	
+
+
+/* ---- Arena------------------- */
+.battleSpecs
+	{
+	padding-left:20px;
+	text-align:left;
+	margin:0;
+	font-size:1.25em;
+	font-family: 'Teko', sans-serif;
+
+	margin:5px 0;
+	}
+
+#arena
+	{
+	min-height:0;
+	}
+
+#yourChar
+	{
+	padding:0;
+	}
+	
+#attack
+	{
+	margin-top:30px;
+	padding:5px 30px;
+	color:white;
+	border: 1px solid white;
+	background-color:transparent;
+	border-radius:150px;
+	font-family: 'Teko', sans-serif;
+	font-size:1.5em;
+	}
+	
+#attack:hover
+	{
+	color:#150808;
+	border: 1px solid white;
+	background-color:white;
+	}
+
+footer 
+	{
+	padding:2% 0;
+	position:relative;
+	bottom:-20em;
+	font-size:.75em;
+	font-weight:light;
+	}
